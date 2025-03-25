@@ -214,21 +214,6 @@ int main(int argc, char* argv[]) {
                         NULL
                     );
                     SDL_RenderPresent(render);
-                    // saveFrame(pFrameRGB, pCodecCtx->width, pCodecCtx->height, i);
-                    // 打印日志信息:
-                    // printf("Frame: %c(%d) pts %d dts %d key_frame %d "
-                    // "[coded_picture_number %d, display_picture_number %d,"
-                    // " %dx%d]\n",
-                    //     av_get_picture_type_char(pFrame->pict_type),
-                    //     pCodecCtx->frame_number,
-                    //     pFrameRGB->pts,
-                    //     pFrameRGB->pkt_dts,
-                    //     pFrameRGB->key_frame,
-                    //     pFrameRGB->coded_picture_number,
-                    //     pFrameRGB->display_picture_number,
-                    //     pCodecCtx->width,
-                    //     pCodecCtx->height
-                    // );
                 } else {
                     break;
                 }
@@ -268,23 +253,8 @@ int main(int argc, char* argv[]) {
 
 void printHelpMenu() {
     printf("Invalid arguments.\n\n");
-    printf("Usage: ./tutorial01 <filename> <max-frames-to-decode>\n\n");
+    printf("Usage: ./program <filename> <max-frames-to-decode>\n\n");
     printf(
-        "e.g: ./tutorial01 /home/rambodrahmani/Videos/Labrinth-Jealous.mp4 "
+        "e.g: ./program /home/rambodrahmani/Videos/Labrinth-Jealous.mp4 "
         "200\n");
-}
-
-void saveFrame(AVFrame* avFrame, int width, int height, int i) {
-    FILE* pf;
-    char szFilename[32];
-    int y;
-    sprintf(szFilename, "tmp/frame%d.ppm", i);
-    pf = fopen(szFilename, "wb");
-    if (pf == NULL) return;
-
-    fprintf(pf, "P6\n%d %d\n255\n", width, height);
-    for (y = 0; y < height; y++) {
-        fwrite(avFrame->data[0] + y*avFrame->linesize[0], 1, width*3, pf);
-    }
-    fclose(pf);
 }
