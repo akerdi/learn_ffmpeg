@@ -152,7 +152,7 @@ int main(int argc, char* argv[]) {
         pCodecCtx->width, pCodecCtx->height,
         pCodecCtx->pix_fmt,
         pCodecCtx->width, pCodecCtx->height,
-        AV_PIX_FMT_RGB24,
+        AV_PIX_FMT_YUV420P,
         SWS_BILINEAR, NULL, NULL, NULL
     );
 
