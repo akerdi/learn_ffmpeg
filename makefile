@@ -10,11 +10,11 @@ build:
 
 
 01:
-	./build/tutorial01/program ${datapath}/Iron_Man-Trailer_HD.mp4 20
+	./build/tutorial01/tutorial01 ${datapath}/Iron_Man-Trailer_HD.mp4 20
 02:
-	./build/tutorial02/program ${datapath}/Iron_Man-Trailer_HD.mp4 2000
+	./build/tutorial02/tutorial02 ${datapath}/Iron_Man-Trailer_HD.mp4 2000
 03:
-	./build/tutorial03/program ${datapath}/Iron_Man-Trailer_HD.mp4 2000
+	./build/tutorial03/tutorial03 ${datapath}/Iron_Man-Trailer_HD.mp4 2000
 
 
 clean:
