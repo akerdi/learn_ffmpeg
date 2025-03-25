@@ -17,3 +17,4 @@ add_definitions("-Wno-invalid-source-encoding")
 add_definitions("-O2")
 
 add_subdirectory(tutorial01)
+add_subdirectory(tutorial02)
