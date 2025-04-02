@@ -195,16 +195,10 @@ int main(int argc, char* argv[]) {
                     rect.w = pCodecCtx->width;
                     rect.h = pCodecCtx->height;
                     SDL_UpdateYUVTexture(
-                        texture,
-                        &rect,
-                        pFrameRGB->data[0],
-                        pFrameRGB->linesize[0],
-
-                        pFrameRGB->data[1],
-                        pFrameRGB->linesize[1],
-
-                        pFrameRGB->data[2],
-                        pFrameRGB->linesize[2]
+                        texture, &rect,
+                        pFrameRGB->data[0], pFrameRGB->linesize[0], // Y
+                        pFrameRGB->data[1], pFrameRGB->linesize[1], // U
+                        pFrameRGB->data[2], pFrameRGB->linesize[2] // V
                     );
                     SDL_RenderClear(render);
                     SDL_RenderCopy(

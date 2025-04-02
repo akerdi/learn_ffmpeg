@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.iced": "coffeescript",
+        "*.conf": "json",
+        "opt.h": "c"
+    }
+}

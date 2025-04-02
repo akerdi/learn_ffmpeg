@@ -1,13 +1,13 @@
 ffdir := /usr/local/ffmpeg
 datapath := /mnt/c/Users/shaohong.jiang/Downloads/ffmpeg-video-player-main/ffmpeg-video-player-main
 
+opt := $(if $(DEBUG),-DCMAKE_PREFIX_PATH=$(ffdir) -DCMAKE_BUILD_TYPE=Debug,-DCMAKE_PREFIX_PATH=$(ffdir))
+
 .PHONY: build
 
 build:
-	cmake -DCMAKE_PREFIX_PATH=$(ffdir) . -B build
+	cmake ${opt} . -B build
 	cd build && make
-
-
 
 01:
 	./build/tutorial01/tutorial01 ${datapath}/Iron_Man-Trailer_HD.mp4 20
