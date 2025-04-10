@@ -2,6 +2,13 @@
     "files.associations": {
         "*.iced": "coffeescript",
         "*.conf": "json",
-        "opt.h": "c"
+        "opt.h": "c",
+        "*.ic": "cpp",
+        "avformat.h": "c",
+        "sdl_thread.h": "c",
+        "sdl.h": "c",
+        "avcodec.h": "c",
+        "swresample.h": "c",
+        "avutil.h": "c"
     }
 }

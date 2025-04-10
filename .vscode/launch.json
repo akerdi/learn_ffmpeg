@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "LaunchDemo",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/build/tutorial03/audio",
+            "args": [
+                "/mnt/c/Users/shaohong.jiang/Downloads/ffmpeg-video-player-main/ffmpeg-video-player-main/Iron_Man-Trailer_HD.mp4",
+                "2000",
+            ],
+            "environment": [
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "/usr/local/lib:/usr/local/ffmpeg/lib"
+                }
+            ],
+            "externalConsole": false,
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "debug"
+        }
+    ]
+}
